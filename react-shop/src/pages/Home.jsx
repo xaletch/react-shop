@@ -31,18 +31,22 @@ const Home = () => {
     // console.log('category id ', id)
   }
  
-  const fetchProducts = () => {
+  const fetchProducts = async () => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const sortBy = sort.sortProperty.replace('-', '');
     const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
     const search = searchValue ? `&search=${searchValue}` : '';
-    
-    axios
-      .get(`https://6425b5ce9e0a30d92b39f227.mockapi.io/burgers?${category}${search}&sortBy=${sortBy}&order=${order}`)
-      .then((res) => {
-        setItems(res.data);
-        setIsLoading(false);
-      })
+
+    try {
+      const res = await axios.get(`https://6425b5ce9e0a30d92b39f227.mockapi.io/burgers?${category}${search}&sortBy=${sortBy}&order=${order}`);
+      setItems(res.data);
+    } catch (error) {
+      console.log('ERROR');
+    } finally {
+      setIsLoading(false);
+    }
+
+    window.scrollTo(0, 0)
   };
 
   // Eсли изменили параметры и был первый рендер
