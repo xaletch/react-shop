@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-shop/static/css/main.52682f40.css",
+    "main.js": "/react-shop/static/js/main.020674b0.js",
+    "Cart.js": "/react-shop/static/js/Cart.6ace4631.chunk.js",
+    "FullProducts.js": "/react-shop/static/js/FullProducts.83a0726d.chunk.js",
+    "NotFound.js": "/react-shop/static/js/NotFound.e5d3fdf5.chunk.js",
+    "static/js/787.affa5bbf.chunk.js": "/react-shop/static/js/787.affa5bbf.chunk.js",
+    "static/media/burger-logo.png": "/react-shop/static/media/burger-logo.61d72e8bb18b8255d29f.png",
+    "static/media/cartEmpty.png": "/react-shop/static/media/cartEmpty.4ea49652c9d0d8b40c39.png",
+    "index.html": "/react-shop/index.html",
+    "main.52682f40.css.map": "/react-shop/static/css/main.52682f40.css.map",
+    "main.020674b0.js.map": "/react-shop/static/js/main.020674b0.js.map",
+    "Cart.6ace4631.chunk.js.map": "/react-shop/static/js/Cart.6ace4631.chunk.js.map",
+    "FullProducts.83a0726d.chunk.js.map": "/react-shop/static/js/FullProducts.83a0726d.chunk.js.map",
+    "NotFound.e5d3fdf5.chunk.js.map": "/react-shop/static/js/NotFound.e5d3fdf5.chunk.js.map",
+    "787.affa5bbf.chunk.js.map": "/react-shop/static/js/787.affa5bbf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52682f40.css",
+    "static/js/main.020674b0.js"
+  ]
+}
