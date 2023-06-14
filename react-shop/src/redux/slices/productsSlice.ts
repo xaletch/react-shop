@@ -66,22 +66,6 @@ const productSlice = createSlice({
             state.items = [];
         });
     }
-    // extraReducers: {
-    //     [fetchProducts.pending]: (state) => {
-    //         state.status = 'loading';
-    //         state.items = [];
-    //     },
-
-    //     [fetchProducts.fulfilled]: (state, action) => {
-    //         state.items = action.payload;
-    //         state.status = 'success';
-    //     },
-
-    //     [fetchProducts.rejected]: (state) => {
-    //         state.status = 'error';
-    //         state.items = [];
-    //     },
-    // },
 });
 
 export const selectProductData = (state: RootState) => state.products;

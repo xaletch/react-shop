@@ -17,7 +17,7 @@ const Cart: React.FC = () => {
     }
   }
 
-  if (!totalPrice) {
+  if (items.length === 0) {
     return <CartEmpty />
   }
 

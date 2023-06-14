@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from "react-redux";
-import { CartItem, addProduct, minusItem, removeItem } from '../redux/slices/cartSlice';
+import { CartItem, addProduct, itemPrice, removeItem } from '../redux/slices/cartSlice';
 
 type CartItemProps = {
   id: string;
@@ -15,7 +15,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({ id, imageUrl, name, wei
   const dispatch = useDispatch();
   
   const onClickMinus = () => {
-      dispatch(minusItem(id))
+      dispatch(itemPrice(id))
   }
   
   const onClickPlus = () => {

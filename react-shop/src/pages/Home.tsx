@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux';
 
 
@@ -17,10 +17,14 @@ const Home: React.FC = () => {
 
   const { items, status } = useSelector(selectProductData);
   const { categoryId, sort, searchValue } = useSelector(selectFilter);
-  
+
+  // category selection
+  const [selectedCategory, setSelectedCategory] = useState('Все');
+  const categories = ['Все', 'Бургеры', 'Комбо', 'Закуски', 'Соусы'];
+
   const onCategory = (id: number) => {
+    setSelectedCategory(categories[id]);
     dispatch(setCategoryId(id));
-    // console.log('category id ', id)
   }
  
   const getProducts = async () => {
@@ -55,11 +59,11 @@ const Home: React.FC = () => {
   return (
       <div className="container">
         <div className="navigation">
-            <Categories value={categoryId} onCategory={onCategory} />
+            <Categories value={categoryId} onCategory={onCategory} categories={categories} />
             <Sort />
         </div>
             <div className="content_items">
-            <h2 className="content_title">Все</h2>
+            <h2 className="content_title">{selectedCategory}</h2>
               {status === 'error' ? (
                   <div className='content__error-info'>
                     <h2>Произошла ошибка</h2>

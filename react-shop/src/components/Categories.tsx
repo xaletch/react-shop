@@ -3,11 +3,10 @@ import React from "react";
 type CategoriesProps = {
   value: number;
   onCategory: (id: number) => void;
+  categories: string[];
 }
 
-const categories = ['Все', 'Бургеры', 'Комбо', 'Закуски', 'Соусы'];
-
-export const Categories: React.FC<CategoriesProps> = ({ value, onCategory, }) => {
+export const Categories: React.FC<CategoriesProps> = ({ value, onCategory, categories }) => {
 
     return (
         <div className="categories">
