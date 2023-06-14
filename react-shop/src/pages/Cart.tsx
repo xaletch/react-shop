@@ -15,7 +15,7 @@ const Cart: React.FC = () => {
     if(window.confirm('Вы действительно хотите очистить корзину?')) {
       dispatch(clearItem())
     }
-  }
+  } 
 
   if (items.length === 0) {
     return <CartEmpty />
