@@ -25,7 +25,7 @@ const FullProducts: React.FC = () => {
     }, []);
 
     if (!product) {
-        return <h3>Идёт загрузка...</h3>
+        return <h3 className='loading'>Идёт загрузка...</h3>
     }
 
     return (

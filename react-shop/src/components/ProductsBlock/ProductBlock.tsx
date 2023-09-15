@@ -31,7 +31,6 @@ export const ProductBlock:React.FC<ProductBlockProps> = ({ id, name, imageUrl, p
 
     return (
         <div className="product-block-wrapper">
-            {/* <h2 className="content_title">{obj.category}</h2> */}
             <div className="card-burger card-block">
                 <div className="burger-content card-content">
                     <Link to={`/product/${id}`}>

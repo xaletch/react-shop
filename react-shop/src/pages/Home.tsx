@@ -53,7 +53,7 @@ const Home: React.FC = () => {
     };
   }, [categoryId, sort, searchValue]);
 
-  const goods = items.map((obj: any) => <ProductBlock key={obj.id} {...obj} />)
+  const products = items.map((obj: any) => <ProductBlock key={obj.id} {...obj} />)
   const skeleton = [...new Array(8)].map((_, index) => <Loader key={index} />)
 
   return (
@@ -64,13 +64,13 @@ const Home: React.FC = () => {
         </div>
             <div className="content_items">
             <h2 className="content_title">{selectedCategory}</h2>
-              {status === 'error' ? (
+              {status === 'error' && searchValue ? (
                   <div className='content__error-info'>
                     <h2>Произошла ошибка</h2>
                     <p>К сожалению, не удалось загрузить товар. Попробуйте повторить попытку чуть позже.</p>
                   </div>
                 ) : (
-                  <div className="content_burger main_content">{status === 'loading' ? skeleton : goods}</div>
+                  <div className="content_burger main_content">{status === 'loading' ? skeleton : products}</div>
               )}
             </div>
         </div>
