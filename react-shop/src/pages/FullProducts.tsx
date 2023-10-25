@@ -30,7 +30,7 @@ const FullProducts: React.FC = () => {
 
     return (
         <div className='container'>
-            <Link to='/'>
+            <Link to='/prosto-burger'>
                 <div className='container__button-to-home'>
                     <button className="button-go_home">
                         <span>Назад</span>

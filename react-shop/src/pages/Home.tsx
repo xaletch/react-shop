@@ -57,23 +57,25 @@ const Home: React.FC = () => {
   const skeleton = [...new Array(8)].map((_, index) => <Loader key={index} />)
 
   return (
-      <div className="container">
-        <div className="navigation">
-            <Categories value={categoryId} onCategory={onCategory} categories={categories} />
-            <Sort />
-        </div>
-            <div className="content_items">
-            <h2 className="content_title">{selectedCategory}</h2>
-              {status === 'error' && searchValue ? (
-                  <div className='content__error-info'>
-                    <h2>Произошла ошибка</h2>
-                    <p>К сожалению, не удалось загрузить товар. Попробуйте повторить попытку чуть позже.</p>
-                  </div>
-                ) : (
-                  <div className="content_burger main_content">{status === 'loading' ? skeleton : products}</div>
-              )}
-            </div>
-        </div>
+    <div className="container">
+      <div className="navigation">
+        <Categories value={categoryId} onCategory={onCategory} categories={categories} />
+        <Sort />
+      </div>
+      <div className="content_items">
+        <h2 className="content_title">{products.length > 0 ? selectedCategory : ''}</h2>
+        {status === 'error' && searchValue ? (
+          <div className='content__error-info'>
+            <h2>Произошла ошибка</h2>
+            <p>К сожалению, не удалось загрузить товар. Попробуйте повторить попытку чуть позже.</p>
+          </div>
+        ) : (
+          <div>
+            {status === 'loading' ? <div className='content_burger main_content'>{skeleton}</div> : products.length > 0 ? <div className='content_burger main_content'>{products}</div> : <h3 style={{textAlign: 'center', padding: '50px 100px 100px 100px'}}>Ничего не найдено</h3>}
+          </div>
+        )}
+      </div>
+    </div>
   )
 }
 

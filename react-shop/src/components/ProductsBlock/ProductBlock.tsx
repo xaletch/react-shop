@@ -33,7 +33,7 @@ export const ProductBlock:React.FC<ProductBlockProps> = ({ id, name, imageUrl, p
         <div className="product-block-wrapper">
             <div className="card-burger card-block">
                 <div className="burger-content card-content">
-                    <Link to={`/product/${id}`}>
+                    <Link to={`product/${id}`}>
                         <img 
                             className="burger-block_image tovar-block_image"
                             src={imageUrl}

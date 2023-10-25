@@ -23,9 +23,9 @@ export const CartItemBlock: React.FC<CartItemProps> = ({ id, imageUrl, name, wei
   }
 
   const onClickRemove = () => {
-    if(window.confirm('Вы точно хотите удалить этот товар из корзины')) {
+    // if(window.confirm('Вы точно хотите удалить этот товар из корзины')) {
       dispatch(removeItem(id));
-    }
+    // }
   }
 
   return (
