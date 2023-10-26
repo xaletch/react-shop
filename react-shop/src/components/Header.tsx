@@ -20,9 +20,9 @@ export const Header: React.FC = () => {
     isMounted.current = true;
   }, [items]);
 
-    return (
-        <div className="header">
-        <div className="container">
+  return (
+    <div className="header">
+      <div className="container">
         <Link to="/prosto-burger">
           <div className="header-logo">
             <img src={logoSvg} alt="Burger-logo" />
@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
           </div>
         </Link>
         {location.pathname !== 'cart' && <Search />}
-          <div className="header-cart">
+        <div className="header-cart">
           {location.pathname !== 'cart' && (
             <Link to="cart" className="button button-cart">
               <span className="cart-price">{totalPrice} ₽</span>

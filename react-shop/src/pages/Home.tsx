@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   const onCategory = (id: number) => {
     setSelectedCategory(categories[id]);
     dispatch(setCategoryId(id));
-  }
+  };
  
   const getProducts = async () => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
