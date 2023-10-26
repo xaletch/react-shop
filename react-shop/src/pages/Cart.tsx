@@ -23,7 +23,7 @@ const Cart: React.FC = () => {
     dispatch(clearItem());
     setClearCart(false);
   }
-
+  
   if (items.length === 0) {
     return <CartEmpty />
   }
